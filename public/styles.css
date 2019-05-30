@@ -6,18 +6,18 @@
 .grid {
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: .5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr;
+  grid-template-rows: .5fr .25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
 	"head head head head head head head head head"
-	"photo photo photo photo photo photo side side side"
-	"photo photo photo photo photo photo side side side"
-	"photo photo photo photo photo photo side side side"
-	"photo photo photo photo photo photo side side side"
-	"reviews reviews reviews reviews reviews reviews side side side"
-	"reviews reviews reviews reviews reviews reviews side side side"
-	"reviews reviews reviews reviews reviews reviews side side side"
-	"reviews reviews reviews reviews reviews reviews side side side"
+	". . . . . . . . ."
+	". photo photo photo photo side side side ."
+	".photo photo photo photo side side side ."
+	". photo photo photo photo side side side ."
+	"reviews reviews reviews reviews reviews side side side ."
+	"reviews reviews reviews reviews reviews side side side ."
+	"reviews reviews reviews reviews reviews side side side ."
+	"reviews reviews reviews reviews reviews side side side ."
 	"more more more more more more more more more"
 	"more more more more more more more more more"
 	"more more more more more more more more more"
@@ -32,39 +32,44 @@
 
 #proxy-header {
 	grid-area: head;
-	object-fit: contain;
-	object-position: center;
+	
 }
 
-#fake-Ignacio {
+#proxy-header > img{
+	width: 100%;
+	height: 100%;
+}
+
+#cis-app {
 	grid-area: photo;
-	object-fit: cover;
-	object-position: center;
+
 }
 
 #fake-Johnny {
 	grid-area: reviews;
-	object-fit: contain;
-	object-position: center;
-  
+
+}
+#fake-Johnny > img{
+	max-width: 100%;
+	height: 100%;
 }
 
 #tjn-root {
 	grid-area: side;
-	object-fit: contain;
-	object-position: center;
   
 }
 
 #jjc-app{
 	grid-area: more;
-	object-fit: contain;
-	object-position: center;
+
   
 }
 #proxy-footer {
 	grid-area: footer;
 
-	object-fit: contain;
-	object-position: center;
+
+}
+#proxy-footer > img{
+	width: 100%;
+	height: 100%;
 }
