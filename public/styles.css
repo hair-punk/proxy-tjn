@@ -35,6 +35,7 @@
 	
 }
 
+
 #cis-app {
 	/* width: 120%; */
 	height: auto;
@@ -49,8 +50,9 @@
 	flex-grow: 2;
 }
 
-#fake-Johnny {
+#jnz-app {
 	grid-area: reviews;
+	/* max-width: 55vw; */
 
 }
 #fake-Johnny > img{
